@@ -8,10 +8,10 @@ public class EventGenerator : MonoBehaviour
 
     [SerializeField] GameObject[] _events = new GameObject[3];
 
-    [SerializeField] float _timeLimit = 10;
+    [SerializeField] float _timeLimit = 5;
     float _countTime = 0;
 
-    bool _isWorking;
+    bool _isWorking=true;
 
 
     void Start()
@@ -50,10 +50,9 @@ public class EventGenerator : MonoBehaviour
         //ƒCƒxƒ“ƒg‚Ì¶¬ŠÔŠu
         if (_countTime > _timeLimit)
         {
-            _isWorking = true;
             _countTime = 0;
 
-            var r = Random.Range(0, 3);
+            var r = Random.Range(0, _events.Length);
             var go = Instantiate(_events[r]);
             go.transform.SetParent(this.transform);
         }
