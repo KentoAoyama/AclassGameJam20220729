@@ -34,6 +34,7 @@ public class Event2 : MonoBehaviour
             {
                 var cube = Instantiate(_cubesVertical);
                 cube.transform.position = _posVertical[i].position;
+                cube.transform.SetParent(transform);
             }
         }
         else
@@ -42,6 +43,7 @@ public class Event2 : MonoBehaviour
             {
                 var cube = Instantiate(_cubesHorizontal);
                 cube.transform.position = _posHorizontal[i].position;
+                cube.transform.SetParent(transform);
             }
         }
     }
@@ -49,6 +51,7 @@ public class Event2 : MonoBehaviour
     private void Update()
     {
         time += Time.deltaTime;
+
 
         if (_timeLimit < time)
         {
