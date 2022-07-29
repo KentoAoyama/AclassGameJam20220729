@@ -19,11 +19,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text _DrowText;
     [SerializeField] Text _ExitText;
     PlayerCounter _playerCounter;
-    [SerializeField] string _sceneName = "SceneName";
     int _life1 = 5;
     int _life2 = 5;
     public bool Stop = false;
     public bool Exit = false;
+    [SerializeField] SceneLoader _sceneLoader;
     // Start is called before the first frame update
     void Start()
     {
@@ -87,8 +87,11 @@ public class GameManager : MonoBehaviour
             _ExitText.enabled = true;
             if(Input.GetButtonDown("Jump"))
             {
-                SceneManager.LoadScene(_sceneName);
                 Exit = false;
+                if (_sceneLoader)
+                {
+                    _sceneLoader.LoadScene();
+                }
             }
         }
     }
