@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float _rotateSpeed;
 
     float _currentRotate;
+    bool _rotateDirection;
 
     void Start()
     {
@@ -23,6 +24,10 @@ public class PlayerMove : MonoBehaviour
 
     void Rotate()
     {
-        transform.rotation = Quaternion.Euler(0, 0, _currentRotate);
+        float direction;
+
+        direction =  _rotateDirection == true ? 1 : -1;
+
+        transform.rotation = Quaternion.Euler(0, 0, _currentRotate += _rotateSpeed * direction );
     }
 }
