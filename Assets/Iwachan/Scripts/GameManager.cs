@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     
     [SerializeField] Text _timeText;
-    float _timer = 100;
+    float _timer = 15;
     GameState _status = GameState.NonInitialized;
     [SerializeField] GameObject _player1;
     [SerializeField] GameObject _player2;
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         }
         if(_timer < 0)
         {
-            _timeText.text = "ŽžŠÔ: 0.00";
+            _timeText.text = "0.00";
             Stop = true; 
             if(_life1 == _life2)
             {
