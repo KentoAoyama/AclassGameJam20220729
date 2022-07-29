@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     
     [SerializeField] Text _timeText;
-    float _timer = 200;
+    [SerializeField] float _timer = 200;
     GameState _status = GameState.NonInitialized;
     [SerializeField] GameObject _player1;
     [SerializeField] GameObject _player2;

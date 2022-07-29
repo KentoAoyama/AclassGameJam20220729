@@ -1081,13 +1081,13 @@ MonoBehaviour:
       - m_Target: {fileID: 759893759}
         m_TargetAssemblyTypeName: SceneChenge, Assembly-CSharp
         m_MethodName: SwitchScene
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Aiba_
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &759893756
@@ -1615,7 +1615,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7fbedc0e7a5a8454599872ec726d3001, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1957,8 +1957,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915966450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0114, y: -0.0137, z: 0}
-  m_LocalScale: {x: 1.3998694, y: 1.3884778, z: 1}
+  m_LocalPosition: {x: -0.0114, y: 0.02, z: 0}
+  m_LocalScale: {x: 1.3998694, y: 2.52, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6

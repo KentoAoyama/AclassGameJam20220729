@@ -14,7 +14,7 @@ public class BeamScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Stage" && collision.gameObject.tag != "Beam")
+        if (collision.gameObject.tag != "Wall" && collision.gameObject.tag != "Beam")
         {
             Destroy(collision.gameObject, 0.1f);
         }

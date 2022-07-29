@@ -37,7 +37,11 @@ public class PlayerMove : MonoBehaviour
         {
             BeamMove();
         }
-        else
+    }
+
+    void FixedUpdate()
+    {
+        if (!_isBeam)
         {
             Rotate();
         }
@@ -71,4 +75,6 @@ public class PlayerMove : MonoBehaviour
 
         _rb.velocity = new Vector2(moveX, moveY);
     }
+
+
 }

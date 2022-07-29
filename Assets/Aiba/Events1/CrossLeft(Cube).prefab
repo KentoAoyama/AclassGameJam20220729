@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8033047102776843505}
   m_Layer: 0
   m_Name: CrossLeft(Cube)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Aoyama/AoyamaScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Sawada/Title.unity
+    guid: 9a914711e746b0845bf0ad449c814a29
+  - enabled: 1
+    path: Assets/Aiba/Aiba_.unity
+    guid: 0773f4a32a8d4084c958b605a49ce421
   m_configObjects: {}
