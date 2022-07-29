@@ -29,14 +29,14 @@ public class PlayerBeam : MonoBehaviour
 
         if (_shootPlayer)
         {
-            if (Input.GetButton("Fire1") && _beam.activeSelf == false)
+            if (Input.GetButtonDown("Fire1") && _beam.activeSelf == false)
             {
                 BeamShoot();
             }
         }
         else
         {
-            if (Input.GetButton("Fire2") && _beam.activeSelf == false)
+            if (Input.GetButtonDown("Fire2") && _beam.activeSelf == false)
             {
                 BeamShoot();
             }

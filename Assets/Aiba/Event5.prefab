@@ -46,5 +46,4 @@ MonoBehaviour:
   _timeLimit: 10
   _player1: {fileID: 7473487026188020979, guid: 446e02247187d8141840d2aa49d607ea, type: 3}
   _player2: {fileID: 3337245030213424842, guid: 7b3c4709be59ffe4883bbb35a4cf05c7, type: 3}
-  createNumber: 3
-  _pos: {fileID: 2019348045450560132, guid: 573b28cabf812b04186d800934962b6b, type: 3}
+  createNumber: 20
