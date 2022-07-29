@@ -5,57 +5,40 @@ using UnityEngine;
 public class PlayerBeam : MonoBehaviour
 {
     [SerializeField] GameObject _beam;
-    [SerializeField] float _shootInterval = 0.2f;
-    [SerializeField] float _beamInterval = 0.2f;
-    float _timer;
 
-    Collider2D _collider;
+    PlayerMove _pm;
     
     void OnEnable()
     {
         _beam.SetActive(false);
-        _collider = _beam.GetComponent<Collider2D>();
+        _pm = GetComponent<PlayerMove>();
     }
 
     void Update()
     {
         bool shootPlayer;
 
-        _timer += Time.deltaTime;
-
         shootPlayer = gameObject.tag == "Player1" ? true : false;
 
         if (shootPlayer)
         {
-            if (Input.GetButton("Fire1") && _timer > _shootInterval)
+            if (Input.GetButton("Fire1") && _beam.activeSelf == false)
             {
-                StartCoroutine(BeamShoot());
+                BeamShoot();
             }
         }
         else
         {
-            if (Input.GetButton("Fire2") && _timer > _shootInterval)
+            if (Input.GetButton("Fire2") && _beam.activeSelf == false)
             {
-                StartCoroutine(BeamShoot());
+                BeamShoot();
             }
         }
     }
 
-    IEnumerator BeamShoot()
+    void BeamShoot()
     {
         _beam.SetActive(true);
-        yield return new WaitForSeconds(_beamInterval);
-        _beam.SetActive(false);
-    }
-
-
-    public void ShootBeam()
-    {
-        _collider.enabled = true;
-    }
-
-    public void BeamFinish()
-    {
-        _collider.enabled = false;
+        _pm.RotateDirection = !_pm.RotateDirection;
     }
 }
