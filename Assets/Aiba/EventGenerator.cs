@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class EventGenerator : MonoBehaviour
 {
 
@@ -13,6 +13,9 @@ public class EventGenerator : MonoBehaviour
 
     bool _isWorking=true;
 
+    [SerializeField] GameObject _text;
+
+    [SerializeField] GameObject _defultWall;
 
     void Start()
     {
@@ -39,6 +42,7 @@ public class EventGenerator : MonoBehaviour
         if(transform.childCount==0)
         {
             _countTime += Time.deltaTime;
+            _defultWall.SetActive(true);
         }
         else
         {
@@ -46,10 +50,17 @@ public class EventGenerator : MonoBehaviour
         }
 
 
-        
+        if (_countTime > 3)
+        {
+            _text.SetActive(true);
+        }
+
+
         //イベントの生成間隔
         if (_countTime > _timeLimit)
         {
+            _text.SetActive(false);
+            _defultWall.SetActive(false);
             _countTime = 0;
 
             var r = Random.Range(0, _events.Length);
@@ -66,6 +77,7 @@ public class EventGenerator : MonoBehaviour
     public void StopGeneration()
     {
         _isWorking = false;
+        _text.SetActive(false);
     }
 
     /// <summary>イベントの生成を始める</summary>
@@ -73,5 +85,7 @@ public class EventGenerator : MonoBehaviour
     {
         _isWorking = true;
         _countTime = 0;
+        _text.SetActive(false);
+        _defultWall.SetActive(true);
     }
 }

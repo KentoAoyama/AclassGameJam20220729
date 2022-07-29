@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Event1 : MonoBehaviour
 {
     [SerializeField] GameObject[] _cubes = new GameObject[3];
@@ -12,6 +13,8 @@ public class Event1 : MonoBehaviour
 
 
     [SerializeField] int _createCount = 10;
+
+
 
     void Start()
     {

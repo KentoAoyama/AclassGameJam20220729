@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Bullet
-  - Player1
-  - Player2
-<<<<<<< HEAD
-  - Wall
-=======
-  - Beam
->>>>>>> 3340cb1f89bd1116b08cad1febae8a64677662d0
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Shake
   - 
   - 
   - 
