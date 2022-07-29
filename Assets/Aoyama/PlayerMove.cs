@@ -5,25 +5,36 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float _movePower = 10;
-    [SerializeField] float _rotateSpeed = 5; 
+    [SerializeField] float _rotateSpeed = 5;
+    [SerializeField] Transform _muzzle;
 
     float _currentRotate;
     bool _rotateDirection;
     public bool RotateDirection { get => _rotateDirection; set => _rotateDirection = value; }
 
+    public bool _isBeam = false;
+    public bool IsBeam { get => _isBeam; set => _isBeam = value; }
+
     Rigidbody2D _rb;
-     
+
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        FirstMove();
     }
 
 
     void Update()
     {
-        Rotate();
-
-        Move();
+        if (_isBeam)
+        {
+            BeamMove();
+        }
+        else
+        {
+            Rotate();
+        }
     }
 
 
@@ -31,17 +42,27 @@ public class PlayerMove : MonoBehaviour
     {
         float direction;
 
-        direction =  _rotateDirection == true ? 1 : -1;
+        direction = _rotateDirection == true ? 1 : -1;
 
         transform.rotation = Quaternion.Euler(0, 0, _currentRotate += _rotateSpeed * direction);
     }
 
-    
-    void Move()
+
+    void FirstMove()
     {
         var moveX = Vector2.right * _movePower;
         var moveY = Vector2.up * _movePower;
 
         _rb.velocity = new Vector2(moveX.x, moveY.y);
+    }
+
+    void BeamMove()
+    {
+        var vec = transform.position - _muzzle.position;
+
+        var moveX = vec.x * _movePower;
+        var moveY = vec.y * _movePower;
+
+        _rb.velocity = new Vector2(moveX, moveY);
     }
 }

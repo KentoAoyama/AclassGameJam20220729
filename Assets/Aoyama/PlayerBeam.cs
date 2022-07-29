@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerBeam : MonoBehaviour
 {
     [SerializeField] GameObject _beam;
-
     PlayerMove _pm;
     
     void OnEnable()
@@ -34,11 +33,17 @@ public class PlayerBeam : MonoBehaviour
                 BeamShoot();
             }
         }
+
+        if (_beam.activeSelf == false)
+        {
+            _pm.IsBeam = false;
+        }
     }
 
     void BeamShoot()
     {
         _beam.SetActive(true);
         _pm.RotateDirection = !_pm.RotateDirection;
+        _pm.IsBeam = true;
     }
 }
