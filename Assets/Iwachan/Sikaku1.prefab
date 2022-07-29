@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4251934384332766995}
   - component: {fileID: 6545322693124277891}
+  - component: {fileID: 4753694812609801084}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: Sikaku1
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,3 +83,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4753694812609801084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880043734207159450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482e7f9307928c14f95d58ef8fa16d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
