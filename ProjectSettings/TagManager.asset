@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player2
+  - Beam
+  - Player1
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -12,8 +16,8 @@ TagManager:
   - Water
   - UI
   - Shake
-  - 
-  - 
+  - Dummy
+  - Player
   - 
   - 
   - 

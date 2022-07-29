@@ -13,7 +13,7 @@ public class Event4 : MonoBehaviour
     void Start()
     {
         _nomalCamera = GameObject.Find("CM vcam1");
-        _shakeCamera = GameObject.Find("CM vcam2");
+        _shakeCamera = GameObject.Find("C2");
 
         _nomalCamera.SetActive(false);
         _shakeCamera.SetActive(true);
