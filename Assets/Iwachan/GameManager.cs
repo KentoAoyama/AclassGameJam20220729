@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
+    [SerializeField] Text _timeText;
+    float _timer;
+    [SerializeField]
     // Start is called before the first frame update
     void Start()
     {
