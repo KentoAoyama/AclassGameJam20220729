@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1579e72934fff974fae80d639e24b939, type: 2}
+  m_Motion: {fileID: 7400000, guid: 681550e744181be4d85ba627f7c53190, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -32,7 +32,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BeamAnimator
+  m_Name: Beam1
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
