@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float _rotateSpeed = 5; 
 
     float _currentRotate;
-    public bool _rotateDirection;
+    bool _rotateDirection;
     public bool RotateDirection { get => _rotateDirection; set => _rotateDirection = value; }
 
     Rigidbody2D _rb;
@@ -33,7 +33,7 @@ public class PlayerMove : MonoBehaviour
 
         direction =  _rotateDirection == true ? 1 : -1;
 
-        transform.rotation = Quaternion.Euler(0, 0, _currentRotate += _rotateSpeed * direction );
+        transform.rotation = Quaternion.Euler(0, 0, _currentRotate += _rotateSpeed * direction);
     }
 
     
