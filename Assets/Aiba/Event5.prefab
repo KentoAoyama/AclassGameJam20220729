@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2666481950837034139
+--- !u!1 &4156062120634620608
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 67201511318474916}
-  - component: {fileID: 1032928914038154010}
+  - component: {fileID: 1563864516981900974}
+  - component: {fileID: 4617902905417937121}
   m_Layer: 0
-  m_Name: Evevt3
+  m_Name: Event5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &67201511318474916
+--- !u!4 &1563864516981900974
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2666481950837034139}
+  m_GameObject: {fileID: 4156062120634620608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3988805, y: 0.083096966, z: -8.043536}
+  m_LocalPosition: {x: -1.6223297, y: -0.7569915, z: -12.095056}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1032928914038154010
+--- !u!114 &4617902905417937121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2666481950837034139}
+  m_GameObject: {fileID: 4156062120634620608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebd8cb8d298a04045b8699a8c1f7e8ed, type: 3}
+  m_Script: {fileID: 11500000, guid: c46e08f5899e39c40a1233d2265a003b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _timeLimit: 10
-  rotatoSpeed: 0.05
+  _player1: {fileID: 7473487026188020979, guid: 446e02247187d8141840d2aa49d607ea, type: 3}
+  _player2: {fileID: 3337245030213424842, guid: 7b3c4709be59ffe4883bbb35a4cf05c7, type: 3}
+  createNumber: 3
+  _pos: {fileID: 2019348045450560132, guid: 573b28cabf812b04186d800934962b6b, type: 3}

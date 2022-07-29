@@ -8,7 +8,10 @@ public class EventGenerator : MonoBehaviour
 
     [SerializeField] GameObject[] _events = new GameObject[3];
 
-    [SerializeField] float _timeLimit = 5;
+    [SerializeField] float _attantionLimit = 7;
+    [SerializeField] float _timeLimit = 10;
+
+
     float _countTime = 0;
 
     bool _isWorking=true;
@@ -50,7 +53,7 @@ public class EventGenerator : MonoBehaviour
         }
 
 
-        if (_countTime > 3)
+        if (_countTime > _attantionLimit)
         {
             _text.SetActive(true);
         }
