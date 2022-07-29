@@ -6,6 +6,7 @@ public class BeamScript : MonoBehaviour
 {
     Collider2D _collider;
 
+
     void Start()
     {
         _collider = GetComponent<BoxCollider2D>();

@@ -2,30 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     
     [SerializeField] Text _timeText;
-    float _timer = 10;
+    float _timer = 100;
     GameState _status = GameState.NonInitialized;
     [SerializeField] GameObject _player1;
     [SerializeField] GameObject _player2;
-    [SerializeField] float _waitTimePlayerDeath = 2f;
     [SerializeField] Text _Win1Text;
     [SerializeField] Text _Win2Text;
     [SerializeField] Text _lifetext1;
     [SerializeField] Text _lifetext2;
     [SerializeField] Text _DrowText;
+    [SerializeField] Text _ExitText;
+    PlayerCounter _playerCounter;
+    [SerializeField] string _sceneName = "SceneName";
     int _life1 = 3;
     int _life2 = 3;
     public bool Stop = false;
+    public bool Exit = false;
     // Start is called before the first frame update
     void Start()
     {
         _Win1Text.enabled = false;
         _Win2Text.enabled = false;
         _DrowText.enabled = false;
+        _ExitText.enabled = false;
+
+        _playerCounter = GetComponent<PlayerCounter>();
     }
 
     // Update is called once per frame
@@ -39,8 +46,10 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Initialise.");
                 Instantiate(_player1);
                 Instantiate(_player2);
-                _lifetext1.text = "P1残機" + _life1;
-                _lifetext2.text = "P2残機" + _life2;
+                //_lifetext1.text = "P1残機" + _life1;
+                //_lifetext2.text = "P2残機" + _life2;
+                _playerCounter.Refresh1(_life1);
+                _playerCounter.Refresh2(_life2);
                 _status = GameState.Initialized;
                 break;
             case GameState.Initialized:
@@ -71,13 +80,23 @@ public class GameManager : MonoBehaviour
             {
                 _Win2Text.enabled = true;
             }
+            GameOver();
+        }
+        if(Exit)
+        {
+            _ExitText.enabled = true;
+            if(Input.GetButtonDown("Jump"))
+            {
+                SceneManager.LoadScene(_sceneName);
+                Exit = false;
+            }
         }
     }
     public void PlayerDead1()
     {
         Debug.Log("Player Dead1."); 
         _life1 -= 1;    // 残機を減らす
-        _lifetext1.text = "P1残機" + _life1;
+        //_lifetext1.text = "P1残機" + _life1;
         if (_Win2Text && _life1 < 1)
         {
             _Win2Text.enabled = true;
@@ -88,7 +107,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Player Dead2.");
         _life2 -= 1;    // 残機を減らす
-        _lifetext2.text = "P2残機" + _life2;
+        //_lifetext2.text = "P2残機" + _life2;
 
         if (_Win1Text && _life2 < 1)
         {
@@ -100,11 +119,13 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         Debug.Log("Gameover");
+        Exit = true;
     }
     
     IEnumerator InstansTimeP1()
     {
         yield return new WaitForSeconds(2f);
+        _playerCounter.Refresh1(_life1);
         if (_life1 > 0)
         {
             Instantiate(_player1);
@@ -119,6 +140,7 @@ public class GameManager : MonoBehaviour
     IEnumerator InstansTimeP2()
     {
         yield return new WaitForSeconds(2f);
+        _playerCounter.Refresh2(_life2);
         if (_life2 > 0)
         {
             Instantiate(_player2);
