@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     
     [SerializeField] Text _timeText;
-    float _timer = 15;
+    float _timer = 200;
     GameState _status = GameState.NonInitialized;
     [SerializeField] GameObject _player1;
     [SerializeField] GameObject _player2;
@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text _ExitText;
     PlayerCounter _playerCounter;
     [SerializeField] string _sceneName = "SceneName";
-    int _life1 = 3;
-    int _life2 = 3;
+    int _life1 = 5;
+    int _life2 = 5;
     public bool Stop = false;
     public bool Exit = false;
     // Start is called before the first frame update
