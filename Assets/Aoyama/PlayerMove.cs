@@ -10,9 +10,11 @@ public class PlayerMove : MonoBehaviour
 
     float _currentRotate;
     bool _rotateDirection;
+    float _rotate;
+
     public bool RotateDirection { get => _rotateDirection; set => _rotateDirection = value; }
 
-    public bool _isBeam = false;
+    bool _isBeam = false;
     public bool IsBeam { get => _isBeam; set => _isBeam = value; }
 
     Rigidbody2D _rb;
@@ -22,11 +24,14 @@ public class PlayerMove : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         FirstMove();
+        _rotate = _rotateSpeed;
     }
 
 
     void Update()
     {
+        _rotateSpeed = _rotate;
+        
         if (_isBeam)
         {
             BeamMove();
