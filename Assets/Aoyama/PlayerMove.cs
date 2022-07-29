@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] float _rotateSpeed = 5;
     [SerializeField] Transform _muzzle;
 
+
     float _currentRotate;
     bool _rotateDirection;
     float _rotate;
