@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         _timer -= Time.deltaTime;
-        _timeText.text = "ŽžŠÔ:" + _timer.ToString("0.00");
+        _timeText.text =_timer.ToString("0.00");
         switch(_status)
         {
             case GameState.NonInitialized:
