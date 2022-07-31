@@ -824,7 +824,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30FBLeftShift\u21D21P Player\u30F4\u30A3\u30A4\u30E0\n\n\n\n\u30FBRighShift\u21D22P
+  m_Text: "\u30FBLeftShift\u21D21P Player\u30F4\u30A3\u30A4\u30E0\n\n\n\n\u30FBRightShift\u21D22P
     Player\u30F4\u30A3\u30A4\u30E0"
 --- !u!222 &543904518
 CanvasRenderer:
@@ -961,11 +961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632345, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0236151
+      value: 6.82
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632345, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.818557
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632345, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -973,7 +973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632345, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632345, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -985,7 +985,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632345, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632345, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -997,7 +997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632345, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 3974145120335632351, guid: 6da6d6d12fc2d8c4fa2df64a8e90b6a4, type: 3}
       propertyPath: m_Name
